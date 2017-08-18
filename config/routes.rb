@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
   scope :api do
-    resources :phrases, except: [:new, :edit] do
-      resources :photos, except: [:new, :edit]
+    resources :phrases do
+      resources :photos
     end
   end
 
-  root to: 'home#index'
+  root to: 'phrases#index'
 
-  match '*path' => 'home#index', via: :get
+  match '*path' => 'phrases#index', via: :get
 end
