@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope :api do
+    resources :tweets, except: [:new, :edit] do
+      resources :pictures, except: [:new, :edit]
+    end
+  end
+
+  root to: 'home#index'
+
+  match '*path' => 'home#index', via: :get
 end
