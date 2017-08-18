@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   scope :api do
-    resources :tweets, except: [:new, :edit] do
-      resources :pictures, except: [:new, :edit]
+    resources :phrases, except: [:new, :edit] do
+      resources :photos, except: [:new, :edit]
     end
   end
 
