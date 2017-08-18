@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+HOSTNAME = ENV['http://localhost:3000']
+
 module TweetPics
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
