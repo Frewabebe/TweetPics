@@ -1,7 +1,7 @@
 /* global angular*/
 
-(function () {
-  angular.module('tweetPicApp', [
-
-  ])
-})()
+// (function () {
+//   angular.module('tweetPicApp', [
+//
+//   ])
+// })()

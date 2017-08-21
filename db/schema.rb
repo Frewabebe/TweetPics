@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170818172727) do
 
   create_table "photos", force: :cascade do |t|
     t.string "photo_url"
-    t.text "tags", default: [], array: true
+    t.string "tags"
     t.datetime "created_on"
     t.bigint "phrase_id"
     t.index ["phrase_id"], name: "index_photos_on_phrase_id"
